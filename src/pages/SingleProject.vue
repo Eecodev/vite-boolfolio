@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>{{ project.title }}</h1>
-        <img :src="" :alt="project.title">
+        <img :src="`${store.imgPath}${project.image}`" :alt="project.title">
     </div>
 </template>
 

@@ -2,24 +2,24 @@
     <div>
         <main class="container">
             <h1>Project List</h1> 
-            <div></div>
+            <div class="row">
+                <div class="col-12 col-md-4 col-lg-3" v-for="project in store.projects" :key="project.id">
+
+                </div>
+            </div>
         </main>
-        
-        <ul>
-            <li v-for="project in $store.state.projects" :key="project.id">
-            <router-link :to="{ name: 'single-project', params: {id: project.id} }" class="btn btn-primary">
-                {{ project.title }}
-            </router-link>
-            </li>
-        </ul>
     </div>
 </template>
 
 <script>
-import {store} from "../store";
+import {store} from "../data/store";
 import axios from "axios";
+import ProjectCard from "../components/ProjectCard";
     export default {
         name: 'AppProjects',
+        components: {
+            ProjectCard
+        },
         data(){
             return{
                 store
