@@ -1,4 +1,4 @@
-import { createRouter } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import AppHome from "./pages/AppHome.vue";
 import AppProjects from './pages/AppProjects.vue';
 import SingleProject from './pages/SingleProject.vue';
