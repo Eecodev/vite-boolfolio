@@ -1,6 +1,7 @@
 <template>
   <AppHeader/>
-  <router-view></router-view>
+  <!-- la :key serve a non fare il reload della pagina, ma la rotta cambia senza fare il reload della pagina -->
+  <router-view :key="$route.path"></router-view>
 </template>
 
 <script>

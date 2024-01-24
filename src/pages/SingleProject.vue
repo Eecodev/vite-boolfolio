@@ -1,8 +1,9 @@
 <template>
-    <div>
+    <div v-if="project">
         <h1>{{ project.title }}</h1>
         <img :src="`${store.imgPath}${project.image}`" :alt="project.title">
     </div>
+    <router-link class="nav-link active" :to="{name: 'single-project', params: {id: ''} }">{{item.label}}</router-link>
 </template>
 
 <script>
@@ -31,7 +32,9 @@ import {store} from '../data/store';
         },
         created(){
             this.getProjectData()
-        }
+        },
+        computed: {
+        },
     }
 </script>
 
