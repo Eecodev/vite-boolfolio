@@ -8,7 +8,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-          <li class="nav-item" v-for="item in menu" :key="index">
+          <li class="nav-item" v-for="(item, index) in menu" :key="index">
               <router-link class="nav-link active" :to="{name: item.name}">{{item.label}}</router-link>
           </li>
 
@@ -27,18 +27,22 @@
         name: "AppHeader",
         data(){
             return {
-                menu: [
+                menu: 
+                [
                     {
-                       label: "Home",
-                        name: "home",
+                      label: "Home",
+                      name: "home",
                         
                     },
                     {
-                        label: "Projects",
-                        name: "projects",
+                      label: "Projects",
+                      name: "projects",
+                    },
+                    {
+                      label: "Contacts",
+                      name: 'contacts',
                     }
-                    
-                ]
+                ],
             }
         }
     }
