@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <img :src="`${store.imgPath}${post.image}`" class="card-img-top" alt="...">
+        <img :src="`${store.imgPath}${project.image}`" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{ truncateTitle }}</h5>
             <p class="card-text">{{ truncateBody }}</p>
