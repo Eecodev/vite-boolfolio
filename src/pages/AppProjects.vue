@@ -45,7 +45,7 @@ import ProjectCard from "../components/ProjectCard.vue";
         },
         methods: {
             getAllProjects(pageNum){
-                axios.get(`${this.store.apiBaseUrl}/projects`,{params: {page: pageNum}}).then((res)=>{
+                axios.get(`${this.store.apiUrl}/projects`,{params: {page: pageNum}}).then((res)=>{
                     console.log(res.data);
                     this.store.projects = res.data.results.data;
                     this.currentPage = res.data.results.current_page;
